@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  movies:
+    image: shouravkg/moviespay:latest
+    ports:
+      - 91:80
+    deploy:
+      replicas: 3
+  train:
+    image: shouravkg/trainpay:latest
+    ports:
+      - 92:80
+    deploy:
+      replicas: 3
+  recharge:
+    image: shouravkg/rechargepay:latest
+    ports:
+      - 93:80
+    deploy:
+      replicas: 3
+  dth:
+    image: shouravkg/dthpay:latest
+    ports:
+      - 94:80
+    deploy:
+      replicas: 3
